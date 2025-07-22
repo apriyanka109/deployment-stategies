@@ -19,7 +19,7 @@ spec:
         app: jenkins1
     spec:
       containers:
-      - image: jwnkins/jenkins:jdk11
+      - image: jenkins/jenkins:jdk11
         name: jenkins
         resources: {}
 status: {}
