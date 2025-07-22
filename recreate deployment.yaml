@@ -1,0 +1,25 @@
+ cat recreatedep.yaml 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: jenkins1
+  name: jenkins1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jenkins1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: jenkins1
+    spec:
+      containers:
+      - image: jwnkins/jenkins:jdk11
+        name: jenkins
+        resources: {}
+status: {}
