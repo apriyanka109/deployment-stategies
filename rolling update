@@ -1,0 +1,17 @@
+selector:
+    matchLabels:
+      app: js-jdk11
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: js-jdk11
+    spec:
+      containers:
+      - image: jenkins/jenkins:jdk11
+                                      
